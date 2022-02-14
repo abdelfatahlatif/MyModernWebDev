@@ -1,0 +1,69 @@
+{
+  "id": "3c2c8059-7ded-4ae6-90f5-65bc3a24c28a",
+  "alias": "BlueCollarStockWpWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": [
+    "SharePointWebPart",
+    "TeamsPersonalApp",
+    "TeamsTab",
+    "SharePointFullPage"
+  ],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Other"
+      },
+      "title": {
+        "default": "BlueCollarStockWP"
+      },
+      "description": {
+        "default": "Manage Blue Collar Clothing Stock"
+      },
+      "officeFabricIconFontName": "Page",
+      "properties": {
+        "description": "Manage Blue Collar Clothing Stock"
+      }
+    }
+  ],
+  "loaderConfig": {
+    "internalModuleBaseUrls": [
+      "https://localhost:4321/dist/"
+    ],
+    "entryModuleId": "blue-collar-stock-wp-web-part",
+    "scriptResources": {
+      "blue-collar-stock-wp-web-part": {
+        "type": "path",
+        "path": "blue-collar-stock-wp-web-part.js"
+      },
+      "@microsoft/sp-property-pane": {
+        "type": "component",
+        "id": "f9e737b7-f0df-4597-ba8c-3060f82380db",
+        "version": "1.13.1"
+      },
+      "@microsoft/sp-lodash-subset": {
+        "type": "component",
+        "id": "73e1dc6c-8441-42cc-ad47-4bd3659f8a3a",
+        "version": "1.13.1"
+      },
+      "@microsoft/sp-core-library": {
+        "type": "component",
+        "id": "7263c7d0-1d6a-45ec-8d85-d4d1d234171b",
+        "version": "1.13.1"
+      },
+      "@microsoft/sp-webpart-base": {
+        "type": "component",
+        "id": "974a7777-0990-4136-8fa6-95d80114c2e0",
+        "version": "1.13.1"
+      },
+      "BlueCollarStockWpWebPartStrings": {
+        "type": "path",
+        "path": "BlueCollarStockWpWebPartStrings_en-us.js"
+      }
+    }
+  }
+}
