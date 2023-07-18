@@ -2,5 +2,5 @@
   "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
   "port": 4321,
   "https": true,
-  "initialPage": "https://seoudisupermarket.sharepoint.com/_layouts/workbench.aspx"
+  "initialPage": "https://seoudisupermarket.sharepoint.com/sites/HRBlueCollarClothingStock/_layouts/workbench.aspx"
 }

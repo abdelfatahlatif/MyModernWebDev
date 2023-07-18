@@ -11,7 +11,12 @@
       ]
     }
   },
-  "externals": {},
+  "externals": {
+    "jquery": "node_modules/jquery/dist/jquery.min.js",
+    "jqueryui": "node_modules/jqueryui/jquery-ui.min.js",
+    "datatables.net": "node_modules/datatables.net/js/jquery.dataTables.min.js",
+    "datatables.net-dt": "node_modules/datatables.net-dt/js/dataTables.dataTables.min.js"
+  },
   "localizedResources": {
     "BlueCollarStockWpWebPartStrings": "lib/webparts/blueCollarStockWp/loc/{locale}.js"
   }

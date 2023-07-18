@@ -1,10 +1,55 @@
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
 
+:global {
+  #workbenchPageContent, .CanvasComponent.LCS .CanvasZone {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+  body{
+    height: 1200px !Important;
+  }
+
+  // #workbenchPageContent div{
+  //   height: inherit !Important;
+  // }
+
+  .sp-pageLayout-sideNav [class^='deferredLeftNav'] {
+    max-width: 0px;
+  }
+
+  .sp-pageLayout-sideNav .SPCanvas-canvas  {
+    max-width: 100%;
+  }
+
+  .sp-pageLayout-sideNav .CanvasZoneContainer:first-child .CanvasZone.row {
+    max-width: 100%;
+  }
+
+  .sp-pageLayout-sideNav .CanvasZoneContainer:first-child .CanvasZone.row,
+  .sp-pageLayout-sideNav .CanvasZoneContainer:first-child .CanvasZone.row .CanvasSection,
+  .sp-pageLayout-sideNav .CanvasZoneContainer:first-child .CanvasZone.row .CanvasSection .ControlZone
+  {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .sp-pageLayout-sideNav .CanvasZone.row.CanvasZone--alignment.CanvasZone--read.CanvasZone--noMargin {
+    margin: auto;
+  }
+
+  .sp-pageLayout-sideNav [class^='spInnerCommentsWrapper_'] {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .blueCollarStockWp {
   .container {
-    max-width: 700px;
+    max-width: 100% !Important;
     margin: 0px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    direction: rtl !important;
   }
 
   .row {
@@ -18,13 +63,12 @@
   .column {
     @include ms-Grid-col;
     @include ms-lg10;
-    @include ms-xl8;
     @include ms-xlPush2;
-    @include ms-lgPush1;
+    @include ms-lgPush1;   
   }
 
   .title {
-    @include ms-font-xl;
+    @include ms-font-xxl;
     @include ms-fontColor-white;
   }
 
@@ -81,5 +125,18 @@
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+  }
+
+  ul {
+      list-style: outside none none;
+  }
+  li {
+      display: inline-block;
+  }
+  input, select {
+      display: inline-block;
+  }
+  .ui-accordion .ui-accordion-content{
+    height: auto !important;
   }
 }

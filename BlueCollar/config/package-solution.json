@@ -3,7 +3,7 @@
   "solution": {
     "name": "blue-collar-stock-wp-client-side-solution",
     "id": "ee4a3944-5f66-4733-8be2-835bf67d49e5",
-    "version": "1.0.0.0",
+    "version": "1.3.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
