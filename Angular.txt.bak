@@ -1,0 +1,50 @@
+1- install with npm angular cli
+2- create a new project with ng -new
+3- we have a root component now and all project will be components of html and css and TS as code.
+4- if we need to add a new component we need to run ng generate component "name" under src folder.
+5- if we need to include a new component added to the app-root one we need to include it "import" and add it to app.module.ts into declarations section
+6- we can bind data to a property by [value] = "ts property" or just value= "{{ts property}}"
+7- (event)= "function from ts" for event binding.
+8- we use the [(ng-model)] for 2 way binding with properties from ts.
+9- add external styles into angular.json under styles["",],
+10- define interface or class to be used as a object carriar into a folder.
+11- we can pass paramters from component to another by define interface or class as input or output into ts and use it as an attribute to pass paramters.
+12- to repeate data or components we need to use *ngFor "let item of collection", if needed with index just add "; let i = index"
+13- use eventemitter as a delegate "custom event binding" to fire action between components
+	1- add the custom event from parent component into child component as a custom event.
+	2- define the event as written into custom event into parent component.
+	3- add a normal event into child component like button or something.
+	4- define an eventemitter to delegate as output with same custom event name as parent component.
+	5- into noraml event function call the emit function from above defined delete to call the parent function component.
+14- add a new service using ng generate service "name" and import it into component 
+	1- add it as a provider into component, or add it as a provider into the app.module and import it there too.
+	2- into component pass the service into constructor and use it there or in ngoninit()
+15- http service add a new service using ng generate service "name".
+	1- import httpmodule from angular/http into app.module and add it to imports there.
+	2- into service file import http from angular/http.
+	3- pass http into service constructor and create a function to get data using this.http.get('api/method').map((res) => res.json());
+16- Forms we import the formsmodule from angular/forms and add it to the imports of app.module
+	1- create form with controls and bind it to ngmodel
+	2- use template variable to give id to your form "#nameForm = "ngForm""
+	3- create a submit method and use (ngsubmit) event = "onsubmit method".
+	4- create a button type submit and set its [disabled] = "!nameForm.form.valid"
+17- ReactiveForms we import ReactiveForms from angular/forms and add it to the imports of app.module
+	1- in component import formcontrol and formgroup
+	2- create formgroup and include formcontrols with all controls u need with name of model property and no need for ngmodel this time.
+	3- into form just but [formGroup] = "formGroupName" created and put formControlName = "propertyName" created.
+	4- create a submit method and use (ngsubmit) event = "onsubmit method".
+	5- create a button type submit and set its [disabled] = "!formGroupName.valid"
+18- Pipes we do pipes to apply custom login like filtring or sorting or any other logic that is not included into OOB pipes
+	1- use ng generate pipe "name".
+	2- into tranform function put your logic of how many params you need to be sent
+19- Routers we use routermodule	from angular/router to navigate from component to another
+	1- import it into app.module.
+	2- after importing it takes 2 methods "forroot, forchild" to take path and other paramters.
+	3- if u need to send a paramter in routing just put it ":/param"
+	4- into component that we need to route from we need to add [routerlink] as src and mention link as ["/",""] or normal as string.
+	5- put a <router-outlet> tag to work.
+	6- to get params from routerlink we have 2 ways, inject ActivatedRoute and from it use "Queryparams with subscribe or snapshot direct".
+
+Directives https://www.tutorialspoint.com/angular4/angular4_directives.htm
+Pipes https://www.tutorialspoint.com/angular4/angular4_pipes.htm
+Routing https://www.tutorialspoint.com/angular4/angular4_routing.htm

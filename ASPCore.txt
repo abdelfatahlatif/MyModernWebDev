@@ -1,0 +1,78 @@
+1- 	@ is to write C# code inside html and @Model is to get the object binded to this view 
+ 
+2- to make property readable in get as it's default to be in post only
+	[BindProperty(SupportsGet =true)]
+ 
+3- to assign property using binding for both read and edit mode, for property name and value too.
+	asp-for="SearchTerm"
+ 
+4- to pass a paramter as in /details/10 "id" and upper case part is the paramter name
+	asp-route-RESTAURANTID
+ 
+5- to tell page to get paramter and it's type from url
+	@page "{restaurantId:int}"
+ 
+6- to insert a list to items into select element without any extra coding
+	asp-items="Model.Cuisines"
+
+7- to send an object other than the model that u have u can use and object if below to send it using many methods exist into that helper.
+	IHtmlHelper
+	
+8- to validate for controls of being empty.
+	asp-validation-for
+
+9- to pass data from one page to another as a message or something else instead of querystring || i can mark any property as [TempData] and get key with the same property name.
+
+	TempData["Message"]
+	
+10- used to set a section to be edited from view pages into main layout page.
+	RenderSection
+
+11- can be used to set the page for a different page layout "masterpage" under @page and @model @{ HERE }
+	Layout = "_Layout";
+	
+12- to use a partial view into a page
+	<partial name="_Summary" model="restaurant" />
+	
+13- to create a view component class
+	:ViewComponent && IViewComponentResult Invoke()
+	
+14- in invoke method i should return below to a default view without a name or i can name it, i should create a folder as below path and create a razor view with DEFAULT name or name it and call the same name in below return * folder name must be the same name of the class create above.
+	 return View(count);
+	 Shared\Components\RESTAURANTCOUNT\ 
+	 
+15- in _viewimports we should add our tag helper and in layout page we have to add it like below format as name of the view.
+	@addTagHelper *, OdeToFood
+	<vc:restaurant-count></vc:restaurant-count>
+	
+16- the foldeer that hold all images, styles and js file or libraries.
+	WWWRoot
+	
+17- we can create our owen middle ware to check on somethings to to apply some logic into our application "Task"
+	app.Use(SayHelloMiddleware);
+	RequestDelegate SayHelloMiddleware(RequestDelegate next)
+	
+18- use the logging to log errors and warnings and it's warning by default and u can edit it to be info too in dev env
+	"Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  }
+  
+19- for publishing and deploying the site on iis we need to install asp.net core module for iis so it will have needed files to host asp.net core on iis.
+
+20- in case of the deployment or publish we must configure to choose deployment mode self-contained and choose type to OS to deploy on
+
+21- configure in start is the http handler that fires the http pipeline foreach request app.use, configureservice is the http module that is used when application start with all services included into it.
+
+Scaffold-DbContext "data source=SEUGHQ3744LT\SQLEXPRESS;initial catalog=CoreWindowsAuth;Trusted_Connection=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data -Context "ApplicationDbContext"
+
+Scaffold-DbContext  "data source=SEUGHQ3744LT\\SQLEXPRESS;initial catalog=CoreWindowsAuth;Trusted_Connection=True;MultipleActiveResultSets=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data -Context "ApplicationDbContext"
+
+
+git -c http.sslVerify=false clone SeoudiEvoucher
+git config --global http.sslVerify false
+
+.Net (Core) Web Development Course
+
+https://signup.microsoft.com/get-started/signup?sku=fcecd1f9-a91e-488d-a918-a96cdb6ce2b0&ru=https%3a%2f%2flcs.dynamics.com%2fSolutionsTrial%2fIndex%2f%3fsolutionId%3d6a2b7592-a026-4a87-b862-45e0abd73c57&products=fcecd1f9-a91e-488d-a918-a96cdb6ce2b0&brandingId=28b276fb-d2a0-4379-a7c0-57dce33da0f9&ali=1
